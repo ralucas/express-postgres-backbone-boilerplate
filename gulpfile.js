@@ -1,4 +1,4 @@
-var gulp = require('gulp'),
+var gulp    = require('gulp'),
     plugins = require("gulp-load-plugins")();
 
 var paths = {
@@ -21,7 +21,7 @@ gulp.task('run', function() {
     plugins.nodemon({
         script: 'server.js',
         ext: 'js'
-    }).on('start')
+    })
     .on('restart', function() {
         console.log('Server Restarted');
     });

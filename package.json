@@ -7,7 +7,9 @@
   },
   "dependencies": {
     "express": "^4.0.0",
-    "nconf": "^0.6.9"
+    "nconf": "^0.6.9",
+    "knex": "^0.5.13",
+    "bookshelf": "^0.6.10"
   },
   "devDependencies": {
     "mocha": "^1.18.2",

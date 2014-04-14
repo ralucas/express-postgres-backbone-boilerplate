@@ -1,8 +1,8 @@
-var app = require('../lib'),
+var app     = require('../lib'),
     request = require('supertest'),
-    assert = require('chai').assert,
-    expect = require('chai').expect,
-    should = require('chai').should;
+    assert  = require('chai').assert,
+    expect  = require('chai').expect,
+    should  = require('chai').should;
 
 describe('GET /heartbeat', function() {
     it('should be json', function(done) {
