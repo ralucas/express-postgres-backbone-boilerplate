@@ -1,3 +1,5 @@
+'use strict';
+
 var app = app || {};
 
 app.appModel = Backbone.Model.extend({
@@ -20,7 +22,7 @@ app.appModel = Backbone.Model.extend({
     },
 
     setZones: function() {
-        this.set({zones: [1,2,3,4,5]});
+        this.set({ zones: [1,2,3,4,5] });
     }
 
 });

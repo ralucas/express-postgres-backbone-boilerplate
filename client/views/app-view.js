@@ -1,3 +1,5 @@
+'use strict';
+
 var app = app || {};
 
 app.appView = Backbone.View.extend({
@@ -11,9 +13,8 @@ app.appView = Backbone.View.extend({
     },
 
     initialize: function() {
-        this.listenTo(this.model, 'change', this.render);
+        this.listenTo(this.model, 'change', this.renderResults);
         this.render();
-        //return this;
     },
 
     template: _.template( $('#formTemplate').html() ),
@@ -23,11 +24,11 @@ app.appView = Backbone.View.extend({
     render: function() {
         this.$el.html(this.template( this.model.toJSON() ));
         return this;
+    },
+
+    renderResults: function() {
+        this.$el.html(this.resultsTemplate( this.model.toJSON() ));
     }
-
-    // showResults: function() {
-
-    // }
 
 });
 

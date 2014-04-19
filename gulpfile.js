@@ -31,7 +31,7 @@ gulp.task('watch', function() {
     gulp.watch(plugins.scripts, ['lint', 'run']);
 });
 
-// Default task runs the tests, lints, starts the server,
+// TODO: Default task runs the tests, lints, starts the server,
 // then watches for changes
 gulp.task('default', ['lint', 'run']);
 
