@@ -21,8 +21,7 @@ gulp.task('run', function() {
     plugins.nodemon({
         script: 'server.js',
         ext: 'js'
-    })
-    .on('restart', function() {
+    }).on('restart', function() {
         console.log('Server Restarted');
     });
 });

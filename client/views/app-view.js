@@ -9,7 +9,7 @@ app.appView = Backbone.View.extend({
     model: new app.appModel(),
 
     events: {
-        'submit': 'showResults'
+        'submit': 'onSubmit'
     },
 
     initialize: function() {
@@ -24,6 +24,10 @@ app.appView = Backbone.View.extend({
     render: function() {
         this.$el.html(this.template( this.model.toJSON() ));
         return this;
+    },
+
+    onSumbit: function() {
+
     },
 
     renderResults: function() {
