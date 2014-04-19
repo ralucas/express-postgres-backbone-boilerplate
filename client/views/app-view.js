@@ -1,23 +1,34 @@
-var appView = Backbone.View.Extend({
+var app = app || {};
 
-    tagName: 'form',
+app.appView = Backbone.View.extend({
 
-    model: 'appModel',
+    el: 'body',
+
+    model: new app.appModel(),
 
     events: {
         'submit': 'showResults'
     },
 
-    template: _.template( $('#form-template').html() ),
+    initialize: function() {
+        this.listenTo(this.model, 'change', this.render);
+        this.render();
+        //return this;
+    },
+
+    template: _.template( $('#formTemplate').html() ),
 
     resultsTemplate: _.template( $('#results-template').html() ),
 
     render: function() {
-
-    },
-
-    showResults: function() {
-
+        this.$el.html(this.template( this.model.toJSON() ));
+        return this;
     }
 
+    // showResults: function() {
+
+    // }
+
 });
+
+var newView = new app.appView();
