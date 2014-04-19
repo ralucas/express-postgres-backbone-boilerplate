@@ -15,18 +15,19 @@
         <script src="vendor/js/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+        <div id="form"></div>
         <script type="text/template" id="formTemplate">
             <form role="form">
                 <div class="form-group">
                     <label for="address">Street Address</label>
-                    <input type="text" class="form-control" id="address" placeholder="Enter Street Address">
+                    <input type="text" class="form-control" id="address" placeholder="Enter Street Address" name="street_address">
                 </div>
                 <div class="form-group">
                     <label for="city">City</label>
-                    <input type="text" class="form-control" id="city" placeholder="Enter City">
+                    <input type="text" class="form-control" id="city" placeholder="Enter City" name="city">
                 </div>
                 <div class="form-group">
-                    <select class="form-control" name="states">
+                    <select class="form-control" name="state">
                         <% for(var i = 0; i < states.length; i++) {%>
                             <option><%= states[i] %></option>
                         <% } %>
@@ -34,10 +35,10 @@
                 </div>
                 <div class="form-group">
                     <label for="zipcode">Zip Code</label>
-                    <input type="text" class="form-control" id="zipcode" placeholder="Enter Zip Code">
+                    <input type="text" class="form-control" id="zipcode" placeholder="Enter Zip Code" name="zipcode">
                 </div>
                 <div class="form-group">
-                    <select class="form-control" name="zones">
+                    <select class="form-control" name="zone">
                         <% for(var i = 0; i < zones.length; i++) {%>
                             <option><%= zones[i] %></option>
                         <% } %>
@@ -47,7 +48,7 @@
             </form>
         </script>
 
-        <script type="text/template" id="results-template">
+        <script type="text/template" id="resultsTemplate">
             <div id="results"></div>
         </script>   
 
@@ -56,8 +57,10 @@
         <script src="vendor/js/underscore.js"></script>
         <script src="vendor/js/backbone.js"></script>
         <script src="collections/app-collection.js"></script>
-        <script src="models/app-model.js"></script>
-        <script src="views/app-view.js"></script>
+        <script src="models/form-model.js"></script>
+        <script src="models/results-model.js"></script>
+        <script src="views/form-view.js"></script>
+        <script src="views/results-view.js"></script>
 
         <!-- Google Analytics -->
         <script>

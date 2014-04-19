@@ -6,3 +6,4 @@ TODO:
 * Use postgres DB
 * Use screen scraping for recommendations (cheerio)
 * Pull current natural gas and electricity pricing and usage data for cost estimations
+* Create module for calculating zones via governmental api

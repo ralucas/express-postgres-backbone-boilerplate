@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.appModel = Backbone.Model.extend({
+app.formModel = Backbone.Model.extend({
 
     initialize: function() {
         this.setStates();
