@@ -1,5 +1,6 @@
 var gulp    = require('gulp'),
-    plugins = require("gulp-load-plugins")();
+    plugins = require("gulp-load-plugins")(),
+    config  = require('./lib/config');
 
 var paths = {
     scripts: ['./lib/*.js'],
@@ -20,14 +21,11 @@ gulp.task('lint', function() {
 gulp.task('run', function() {
     plugins.nodemon({
         script: 'server.js',
-        ext: 'js'
+        ext: 'js json html',
+        env: {'NODE:ENV': 'development'}
     }).on('restart', function() {
         console.log('Server Restarted');
     });
-});
-
-gulp.task('watch', function() {
-    gulp.watch(plugins.scripts, ['lint', 'run']);
 });
 
 // TODO: Default task runs the tests, lints, starts the server,

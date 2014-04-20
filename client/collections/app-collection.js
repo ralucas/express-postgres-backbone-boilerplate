@@ -6,6 +6,6 @@ app.appCollection = Backbone.Collection.extend({
     
     model: app.appModel,
     
-    url: '/api/furnaces'
+    url: ''
 
 });

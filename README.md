@@ -1,9 +1,9 @@
-Heating and cooling calculator
+Boilerplate setup that utilizes the following:
 ---
 
-TODO:
-* Use api (Zillow, Governmental?) to pull sq footage from users address
-* Use postgres DB
-* Use screen scraping for recommendations (cheerio)
-* Pull current natural gas and electricity pricing and usage data for cost estimations
-* Create module for calculating zones via governmental api
+1. Express Node.js server framework
+2. Postgres database support via Bookshelf orm
+3. Testing with Mocha and Chai
+4. Task running with Gulp
+5. Configuration with nconf
+6. Client side integration with Backbone.js

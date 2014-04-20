@@ -2,16 +2,16 @@
 
 var app = app || {};
 
-app.formView = Backbone.View.extend({
+app.appView = Backbone.View.extend({
 
-    el: 'div#form',
+    el: 'body',
 
     initialize: function() {
-        this.model = new app.formModel();
+        this.model = new app.appModel();
         this.render();
     },
 
-    template: _.template( $('#formTemplate').html() ),
+    template: _.template(  ),
 
     render: function() {
         this.$el.html(this.template( this.model.toJSON() ));
@@ -20,4 +20,4 @@ app.formView = Backbone.View.extend({
 
 });
 
-var formView = new app.formView();
+var appView = new app.appView();
